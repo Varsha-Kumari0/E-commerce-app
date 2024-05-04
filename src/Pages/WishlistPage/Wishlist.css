@@ -1,0 +1,6 @@
+.pad10{
+    padding: 10px; 
+}
+.itemscontainer{
+    display: flex;
+}
