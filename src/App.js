@@ -8,17 +8,11 @@ import { SignUp } from "./Pages/SignUp/SignUp";
 import { Cart } from "./Pages/CartPage/Cart";
 
 function App() {
+ 
   return (
-    <>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/sign-up" element={<SignUp />} />
-      </Routes>
-      <Footer />
-    </>
+    <div >
+      <Login/>
+    </div>
   );
 }
 
