@@ -1,6 +1,52 @@
-.pad10{
-    padding: 10px; 
+.pad10 {
+    padding: 10px;
 }
-.itemscontainer{
+
+.itemsContainer {
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding: 15px;
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; Adjust the spacing between items */
+}
+
+.item {
+    flex: 1 1 250px; /* Set a flexible width for each item */
+    margin: 10px; /* Add margin between items */
     display: flex;
+    flex-direction: column; /* Stack item components vertically */
+    align-items: center;/* Center item components horizontally*/
+    text-align: center; /* Center item content */
+}
+
+.itemImage img {
+    max-width: 100%;
+    height: auto;
+}
+
+.price {
+    background-color: blue;
+    color: white;
+    padding: 5px; /* Add padding for better appearance */
+    border-radius: 3px;
+    margin-top: 10px; /* Reduce margin for better alignment */
+}
+
+button {
+    height: 25px;
+    background-color: red;
+    color: white;
+    font-family: cursive;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .itemsContainer {
+        justify-content: center; /* Center items horizontally */
+    }
+
+    .item {
+        flex: 1 1 100%;
+    }
 }
