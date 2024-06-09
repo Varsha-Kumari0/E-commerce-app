@@ -3,9 +3,34 @@ import './HomePage.css';
 import banner1 from '../../assets/images/banner-1.jpg';
 import banner2 from '../../assets/images/banner-2.jpg';
 import banner3 from '../../assets/images/banner-3.jpg';
-import {hat, coat, coesmetic, glasses, bag, dress, jacket} from "./images"
+import {hat, coat, coesmetic, glasses, bag, dress, jacket, product1, product2, product3, product4, product5, product6, product7, product8, product9} from "./images"
+import { Card } from '../../Components/Card/Card';
 
 export const HomePage = () => {
+
+  const products = [product9, product2, product3, product4, product5, product6, product7, product8, product1]
+  const product_text = [
+    "VERO MODA Women's Regular Fit Top",
+    "VERO MODA Women's Slim Fit Jeans",
+    "VERO MODA Women's Slim Fit T-Shirt",
+    "VERO MODA Women's Slim Fit T-Shirt",
+    "VERO MODA Men's Pajamas's",
+    "VERO MODA Men's Shorts",
+    "VERO MODA Women's Slim Fit Jeans",
+    "VERO MODA Women's Slim Fit T-Shirt",
+    "VERO MODA Women's Slim Fit Jeans"
+  ]
+  const product_heading = [
+    "Stylish Tops",
+    "Stylish Tops",
+    "Stylish Tops",
+    "Stylish Tops",
+    "Stylish Pajama's",
+    "Stylish Shorts",
+    "Stylish Tops",
+    "Stylish Tops",
+    "Stylish Tops"
+  ]
   return (
     <div className='p-4 w-full flex flex-col md:flex-row'>
       <div className="banner">
@@ -62,7 +87,7 @@ export const HomePage = () => {
 
     <div className="category">
 
-      <div className="container">
+      <div className="category-container">
 
         <div className="category-item-container has-scrollbar">
 
@@ -171,6 +196,12 @@ export const HomePage = () => {
 
       </div>
 
+    </div>
+
+    <div className='card-container'>
+    {products.map((product, index)=>(
+      <Card imgURL={product} heading={product_heading[index]} text={product_text[index]} />
+    ))}
     </div>
     </div>
   )
