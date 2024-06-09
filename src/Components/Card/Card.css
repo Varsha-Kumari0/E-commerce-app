@@ -1,0 +1,41 @@
+:root {
+    --cardWidth: 260px;
+    --cardHeight: 380px;
+    --cardMargin: 16px;
+  }
+.card {
+    width: var(--cardWidth);
+    height: var(--cardHeight);
+    margin: var(--cardMargin);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #fff;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+  .card img{
+    object-fit: cover;
+    margin: auto;
+    display: block;
+  }
+  
+  .heading{
+    color: salmon;
+    text-align: center;
+    align-items: center;
+  }
+.text{
+    text-align: center;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.price{
+    font-weight: 700;
+    color: salmon;
+}
+.price span{
+    font-weight: 400;
+    color: #333;
+    text-decoration: line-through;
+    padding-left: 8px;
+}
