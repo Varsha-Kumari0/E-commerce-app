@@ -6,18 +6,20 @@
     border: 2px solid gray;
     border-radius: 5px;
     padding: 15px;
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around; Adjust the spacing between items */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
 }
 
 .item {
-    flex: 1 1 250px; /* Set a flexible width for each item */
-    margin: 10px; /* Add margin between items */
     display: flex;
-    flex-direction: column; /* Stack item components vertically */
-    align-items: center;/* Center item components horizontally*/
-    text-align: center; /* Center item content */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .itemImage img {
@@ -28,9 +30,9 @@
 .price {
     background-color: blue;
     color: white;
-    padding: 5px; /* Add padding for better appearance */
+    padding: 5px;
     border-radius: 3px;
-    margin-top: 10px; /* Reduce margin for better alignment */
+    margin-top: 10px;
 }
 
 button {
@@ -38,15 +40,27 @@ button {
     background-color: red;
     color: white;
     font-family: cursive;
+    margin-top: 10px;
 }
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
     .itemsContainer {
-        justify-content: center; /* Center items horizontally */
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        justify-content: center;
     }
 
     .item {
-        flex: 1 1 100%;
+        padding: 5px;
+    }
+
+    .price {
+        padding: 3px;
+        margin-top: 5px;
+    }
+
+    button {
+        height: 20px;
+        font-size: 12px;
     }
 }

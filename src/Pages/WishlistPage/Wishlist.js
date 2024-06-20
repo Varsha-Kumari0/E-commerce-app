@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import photo_url1 from '../WishlistPage/assets/abc.jpg';
 import './Wishlist.css';
 function Wishlist() {
-    const [noOfItems, setNoOfItems] = useState(0);
+    const [noOfItems, setNoOfItems] = useState(3);
     const [items, setItems] = useState([
         {
             photo_url: '../WishlistPage/assets/abc.jpg',
@@ -13,7 +13,33 @@ function Wishlist() {
             photo_url :'../WishlistPage/assets/shoes.jpg',
             price:4000,
             description:'Bacca Bucci shoes best quality and best comfort'
-        },{
+        },
+        {
+            photo_url :'../WishlistPage/assets/shoes.jpg',
+            price:4000,
+            description:'Bacca Bucci shoes best quality and best comfort'
+        },
+        {
+            photo_url :'../WishlistPage/assets/shoes.jpg',
+            price:4000,
+            description:'Bacca Bucci shoes best quality and best comfort'
+        },
+        {
+            photo_url :'../WishlistPage/assets/shoes.jpg',
+            price:4000,
+            description:'Bacca Bucci shoes best quality and best comfort'
+        },
+        {
+            photo_url :'../WishlistPage/assets/shoes.jpg',
+            price:4000,
+            description:'Bacca Bucci shoes best quality and best comfort'
+        },
+        {
+            photo_url :'../WishlistPage/assets/shoes.jpg',
+            price:4000,
+            description:'Bacca Bucci shoes best quality and best comfort'
+        },
+        {
             photo_url :'../WishlistPage/assets/shoes.jpg',
             price:4000,
             description:'Bacca Bucci shoes best quality and best comfort'
