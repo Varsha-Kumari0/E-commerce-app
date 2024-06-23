@@ -7,6 +7,8 @@ import { HomePage } from "./Pages/HomePage/HomePage";
 import { SignUp } from "./Pages/SignUp/SignUp";
 import { Cart } from "./Pages/CartPage/Cart";
 import Wishlist from "./Pages/WishlistPage/Wishlist";
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 function App() {
   return (
     <>
