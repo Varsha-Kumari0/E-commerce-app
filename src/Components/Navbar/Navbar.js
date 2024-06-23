@@ -16,7 +16,7 @@ export const Navbar = () => {
   return (
     <>
       <header className="header">
-        <div className="container">
+        <div className="NavContainer">
           <div>
             <Link to="/">
             <img
@@ -67,7 +67,7 @@ export const Navbar = () => {
             <nav className="nav">
               <ul className="nav-list">
                 <li className="nav-item">
-                  <Link to="/profile" className="nav-link">
+                  <Link to="/login" className="nav-link">
                     Profile
                   </Link>
                 </li>
