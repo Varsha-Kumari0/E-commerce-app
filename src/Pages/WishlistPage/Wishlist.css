@@ -7,24 +7,49 @@
     border-radius: 5px;
     padding: 15px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: 1fr; /* One item per row by default */
     gap: 15px;
+    max-width: 80%; /* Set maximum width to 80% */
+    margin: auto; /* Center the container horizontally */
 }
 
 .item {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    flex-direction: row; /* Arrange item components horizontally */
+    align-items: flex-start;
+    text-align: left;
     background: #f9f9f9;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.itemImage {
+    flex: 0 0 150px; /* Fixed width for the image container */
+    margin-right: 20px;
+}
+
 .itemImage img {
     max-width: 100%;
     height: auto;
+    display: block;
+}
+
+.itemDetails {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.description {
+    margin-bottom: 10px; /* Space between description and price/button */
+}
+
+.priceAndButton {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px; /* Space between price and button */
 }
 
 .price {
@@ -32,7 +57,6 @@
     color: white;
     padding: 5px;
     border-radius: 3px;
-    margin-top: 10px;
 }
 
 button {
@@ -40,18 +64,33 @@ button {
     background-color: red;
     color: white;
     font-family: cursive;
-    margin-top: 10px;
+    flex-shrink: 0; /* Prevent button from shrinking */
 }
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
     .itemsContainer {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Two items per row */
         justify-content: center;
     }
 
     .item {
-        padding: 5px;
+        flex-direction: column; /* Stack item components vertically */
+        align-items: center; /* Center item components horizontally */
+    }
+
+    .itemImage {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .itemDetails {
+        text-align: center;
+        align-items: center;
+    }
+
+    .priceAndButton {
+        flex-direction: column; /* Stack price and button vertically */
     }
 
     .price {
@@ -62,5 +101,7 @@ button {
     button {
         height: 20px;
         font-size: 12px;
+        margin-left: 0;
+        margin-top: 5px; /* Add space between price and button in column layout */
     }
 }
